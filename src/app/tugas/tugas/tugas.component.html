@@ -1,0 +1,14 @@
+<div class="second-container">
+    <div class="description">
+        <div class="judul-artikel">Tambah Gambar Baru</div>
+        <div class="deskripsi">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque qui, quo nobis dignissimos dolores perferendis? Ipsa, exercitationem, dolores dolorum delectus placeat dolorem omnis veniam enim consequuntur voluptas iure, explicabo minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga fugit magnam ex dolore, ullam, alias ab libero soluta vero optio eos, porro maiores nihil enim quos. Commodi deleniti ea placeat. 
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias illum quasi eaque, nam explicabo culpa. Expedita tempore odio inventore eos magni! Illum eveniet quae voluptate et corporis, praesentium accusantium ullam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio a delectus ratione error tempora necessitatibus possimus officia quam alias porro! Repudiandae magni voluptates officia omnis excepturi laudantium numquam, ipsum facere. </div>
+        <div class="read-more"><button class="read" (click)="addImage()">Tambah Gambar</button></div>
+    </div>
+    <div class="portrait">
+        <img class="gambar" *ngFor="let image of images"
+        [src]="image"
+        [alt]="image"/>
+    </div>
+</div>

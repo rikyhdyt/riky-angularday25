@@ -1,0 +1,63 @@
+div.second-container{
+    margin-top: 80px;
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+    justify-content: space-between;
+    background-color: gray;
+}
+
+div.portrait{
+    width: 50%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+}
+
+img.gambar{
+    width: 100%;
+    height: auto;
+}
+
+div.description{
+    width: 80%;
+}
+
+div.judul-artikel{
+    font-family: sans-serif;
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+}
+
+div.deskripsi{
+    margin-top: 3px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+div.read-more{
+    margin-top: 5px;
+    opacity: 70%;
+    padding: 20px;
+}
+
+button.read{
+    background-color: orange;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 800;
+    border: none;
+    color: white;
+}

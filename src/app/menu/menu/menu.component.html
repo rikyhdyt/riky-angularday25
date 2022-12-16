@@ -1,0 +1,104 @@
+<div class="container mt-3">
+    <div class="judul">
+        <h1> Menu APP</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3>Daftar pesanan</h3>
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label class="form-label">Makanan/minuman</label>
+                        <input type="text" class="form-control" [(ngModel)]="menu.name" placeholder="Masukan pilihan menu">
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label class="form-label">Harga</label>
+                        <input type="number" class="form-control" [(ngModel)]="menu.price">
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label class="form-label">Quantity</label>
+                        <input type="number" class="form-control" [(ngModel)]="menu.qty">
+                    </div>
+
+                    <button (click)="addMenu()" type="button" class="btn btn-primary" >Save</button>
+                    <p class="error">{{notif}}</p>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-body">
+                    <ngb-alert *ngIf="menus.length > 0 ;else emptyMenu" >Menu telah ditambahkan</ngb-alert>
+                    <table class="table table-striped">
+                        <ng-template #emptyMenu>
+                            <div class="alert alert-warning mt-4" role="alert">
+                              List menu masih kosong!
+                            </div>
+                          </ng-template>
+                        <thead>
+                            <tr>
+                                <th>Makanan/Minuman</th>
+                                <th>Quantity</th>
+                                <th>Harga</th>
+                                <th>Sub-total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngIf="menus">
+                            <ng-template ngFor let-item [ngForOf]="menus" let-i="index">
+                            <tr>
+                                <td>{{item.name}}</td>
+                                <td>{{item.price}}</td>
+                                <td>{{item.qty}}</td>
+                                <td>{{item.price * item.qty}}</td>
+                                <td><button (click)="removeMenu(i)" type="button" class="btn btn-danger" >Hapus</button></td>
+                            </tr>
+                        </ng-template>
+                        </tbody>
+                    
+                    </table>
+
+                    <div class="bill">
+                        <p class="info">Pajak ppn : 11%</p>
+                        <p class="info">Total Harga : RP. {{total}}</p>
+                        <p class="info">Grant Total : Rp. {{(total * pajak) + total}}</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mt-3">
+            <div class="card shadow">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3>Bayar</h3>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="form-label">Jumlah Uang</label>
+                        <input type="number" class="form-control" [(ngModel)]="bayar">
+                    </div>
+                    
+                  <div class="form-group mt-3">
+                    <button (click)="bayarTagihan()" type="button" class="btn btn-primary" >Bayar</button>
+                  </div>
+                    
+                    <div class="form-group mt-3">
+                        <p class="info">Jumlah Bayar : Rp. {{bayar}} </p>
+                        <p class="info" *ngIf="kembalian > 0"> Kembalian : Rp. {{kembalian}}
+                        </p>
+                            <ngb-alert *ngIf="kembalian < 0"> ERORR !!!, uang pembayaran tidak mencukupi </ngb-alert>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+
+.judul{
+    text-align: center;
+    border-bottom: solid;
+    border-color: gray;
+    margin-bottom: 30px;
+}
+
+.bill{
+    border-top: solid;
+    border-color: gray;
+    margin-top: 20px;
+}
+
+.info{
+    font-weight: bold;
+}
+
+p.notif{
+    font-size: 15px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(133, 133, 133);
+    margin-top: 20px;
+}
+
+p.error{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: red;
+    margin-top: 10px;
+}

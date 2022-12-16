@@ -1,0 +1,56 @@
+
+div.main-container{
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 95px;
+}
+
+div.button-container{
+    display: flex;
+    justify-content: flex-start;
+}
+
+a.button-satu{
+    margin-right: 30px;
+}
+
+h1.headline{
+    color: white;
+    font-family: sans-serif;
+    font-size: 50px;
+}
+
+p.tulisan{
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight:600;
+    margin-bottom: 35px;
+    margin-top: 20px;
+}
+
+a.button-satu{
+    background-color: orange;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 800;
+    opacity: 80%;
+}
+
+a.button-dua{
+    background-color: black;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 800;
+    opacity: 80%;
+}

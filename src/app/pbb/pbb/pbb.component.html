@@ -1,0 +1,34 @@
+
+    <div class="container">
+        <div class="sub-container">
+            <h1>PBB Kalkulator</h1>
+            <p class="desc">Perhitungan pajak bumi dan bangunan</p>
+            
+            <div class="card-body">
+            <div class="form-group mb-3">
+            <p class="mb-2">Luas Tanah</p>
+            <input type="number" class="form-control" [(ngModel)]="luasTanah"  placeholder="Masukan luas tanah"/>
+             </div>
+
+            <p class="mb-2">Luas Bangunan</p>
+            <input type="number" class="form-control" [(ngModel)]="luasBangunan" placeholder="Masukan luas bangunan" />
+
+            <p class="mb-2">NJOP Tanah</p>
+            <input type="number" class="form-control" [(ngModel)]="njopTanah" placeholder="Masukan NJOP tanah"/>
+
+            <p class="mb-2">NJOP Bangunan</p>
+            <input type="number" class="form-control" [(ngModel)]="njopBangunan" placeholder="Masukan NJOP bangunan"/>
+
+            <div><button type="button" class="btn btn-primary btn-lg" (click)="hitungPbb()"> Hitung </button></div>
+
+                <p class="info">
+                <ngb-alert *ngIf="pbb > 0"> Besaran PBB adalah {{pbb}} </ngb-alert>
+                <ngb-alert *ngIf="pbb < 0"> ERORR !!! </ngb-alert>
+                </p>
+            <!-- <p class="info" [innerHTML]="result"></p> -->
+        </div>
+    </div>
+    </div>
+
+
+   

@@ -1,0 +1,38 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-4">
+            
+            <div class="card shadow">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h2>Task BootCamp APP</h2>
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label class="form-label">Tugas Saya</label>
+                        <input type="text" class="form-control" [(ngModel)]="todo">
+                    </div>
+                    <button (click)="addTodo()" type="button" class="btn btn-primary">Tambah Tugas</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="todos">
+                    <ng-template ngFor let-item [ngForOf]="todos" let-i="index">
+                    <tr>
+                        <td>{{item}}</td>
+                        <td> <button (click)="delTodo(i)" type="button" class="btn btn-danger">Hapus</button></td>
+                    </tr>
+                </ng-template>  
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
